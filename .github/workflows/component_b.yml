@@ -22,7 +22,7 @@ jobs:
   deploy-prod:
     needs: deploy-staging
     runs-on: ubuntu-latest
-    environment: prod
+    environment: component-b-prod
     steps:
       - name: Setup repository
         uses: actions/checkout@v3

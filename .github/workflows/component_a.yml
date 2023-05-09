@@ -21,7 +21,7 @@ jobs:
           echo "deploying staging"
   deploy-prod:
     runs-on: ubuntu-latest
-    environment: prod
+    environment: component-a-prod
     needs: deploy-staging
     steps:
       - name: Setup repository
