@@ -5,8 +5,8 @@ jobs:
   component_a:
     name: "Component A"
     uses: "./.github/workflows/component_a.yml"
-    secrets: inhertit
+    secrets: inherit
   component_b:
     name: "Component B"
     uses: "./.github/workflows/component_b.yml"
-    secrets: inhertit
+    secrets: inherit
