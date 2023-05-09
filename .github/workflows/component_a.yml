@@ -12,6 +12,7 @@ jobs:
   deploy-staging:
     runs-on: ubuntu-latest
     environment: staging
+    needs: build
     steps:
       - name: Setup repository
         uses: actions/checkout@v3
@@ -21,6 +22,7 @@ jobs:
   deploy-prod:
     runs-on: ubuntu-latest
     environment: prod
+    needs: deploy-staging
     steps:
       - name: Setup repository
         uses: actions/checkout@v3
