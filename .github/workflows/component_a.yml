@@ -1,0 +1,29 @@
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup repository
+        uses: actions/checkout@v3
+      - name: "buildit"
+        run: |
+          echo "building component a"
+  deploy-staging:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Setup repository
+        uses: actions/checkout@v3
+      - name: buildit
+        run: |
+          echo "deploying staging"
+  deploy-prod:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Setup repository
+        uses: actions/checkout@v3
+      - name: buildit
+        run: |
+          echo "deploying prod"
